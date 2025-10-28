@@ -1,68 +1,98 @@
+import "../../helpers/i18n";
+
+import { motion } from "framer-motion";
 import {
   Accordion,
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
+import { ChevronDown } from "lucide-react";
+import { useTranslation } from "react-i18next";
 
-const faqs = [
-  {
-    question: "Consigo importar do Excel?",
-    answer: "Atualmente não oferecemos importação direta de planilhas Excel, mas você pode facilmente cadastrar seus lançamentos manualmente ou em lote. Estamos trabalhando em uma funcionalidade de importação para futuras versões.",
-  },
-  {
-    question: "Como calculam o lucro?",
-    answer: "O lucro é calculado automaticamente subtraindo o custo do valor de entrada. Quando o custo é zero ou não informado, o sistema considera o valor total como lucro. Você pode visualizar margens e lucros em tempo real no dashboard.",
-  },
-  {
-    question: "Posso ter vários usuários?",
-    answer: "Sim! No plano Pro você pode adicionar usuários ilimitados com diferentes níveis de permissão (admin ou usuário). Cada membro da equipe pode ter sua própria conta com acesso controlado às funcionalidades.",
-  },
-  {
-    question: "Dá para filtrar por período e categoria?",
-    answer: "Com certeza! O Verval oferece filtros avançados por período (dia, semana, mês), categoria, responsável e tipo de lançamento. Você pode combinar múltiplos filtros para análises precisas.",
-  },
-  {
-    question: "Tem versão mobile?",
-    answer: "O Verval é um Progressive Web App (PWA) totalmente responsivo. Você pode acessá-lo de qualquer dispositivo através do navegador e até adicionar um atalho na tela inicial do seu smartphone para acesso rápido.",
-  },
-  {
-    question: "Como funciona a recorrência?",
-    answer: "Ao criar um lançamento, você pode definir se ele é recorrente (mensal) ou indefinido. O sistema registra automaticamente os lançamentos futuros sem precisar cadastrá-los manualmente todos os meses.",
-  },
-];
+const container = {
+  hidden: { opacity: 0 },
+  show: { opacity: 1, transition: { staggerChildren: 0.08, delayChildren: 0.12 } },
+} as const;
+
+const item = {
+  hidden: { opacity: 0, y: 16 },
+  show: { opacity: 1, y: 0, transition: { duration: 0.4 } },
+} as const;
 
 export const FAQ = () => {
+  const { t } = useTranslation();
+
+  // chaves dos itens para mapear perguntas/respostas
+  const faqKeys = ["importExcel", "profitCalc", "multiuser", "filters", "mobile", "recurrence"] as const;
+  const faqs = faqKeys.map((k) => ({
+    key: k,
+    question: t(`faq.items.${k}.q`),
+    answer: t(`faq.items.${k}.a`),
+  }));
+
   return (
     <section className="py-24 bg-background">
       <div className="container px-4 mx-auto">
-        <div className="text-center mb-16">
+        <motion.div
+          className="text-center mb-16"
+          initial={{ opacity: 0, y: 16 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.45 }}
+          transition={{ duration: 0.45 }}
+        >
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4">
-            Perguntas frequentes
+            {t("faq.title")}
           </h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            Tudo o que você precisa saber sobre o Verval
+            {t("faq.subtitle")}
           </p>
-        </div>
+        </motion.div>
 
-        <div className="max-w-3xl mx-auto">
+        <motion.div
+          className="max-w-3xl mx-auto"
+          variants={container}
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: true, amount: 0.35 }}
+        >
           <Accordion type="single" collapsible className="space-y-4">
             {faqs.map((faq, index) => (
-              <AccordionItem 
-                key={index} 
-                value={`item-${index}`}
-                className="border border-border/50 rounded-lg px-6 shadow-sm hover:shadow-card transition-shadow bg-card"
-              >
-                <AccordionTrigger className="text-left text-lg font-semibold hover:no-underline py-5">
-                  {faq.question}
-                </AccordionTrigger>
-                <AccordionContent className="text-muted-foreground pb-5 leading-relaxed">
-                  {faq.answer}
-                </AccordionContent>
-              </AccordionItem>
+              <motion.div key={faq.key} variants={item}>
+                <AccordionItem
+                  value={`item-${index}`}
+                  className="border border-border/50 rounded-lg px-2 sm:px-4 shadow-sm hover:shadow-card transition-shadow bg-card"
+                >
+                  {/* Trigger com ícone animado via data-state do Radix */}
+                  <AccordionTrigger className="text-left text-lg font-semibold hover:no-underline py-5">
+                    <div className="flex w-full items-center justify-between gap-4">
+                      <span className="pr-2">{faq.question}</span>
+                      <span
+                        aria-hidden
+                        className="shrink-0 rounded-full border border-border/60 p-1"
+                      >
+                        <ChevronDown className="h-4 w-4 transition-transform data-[state=open]:rotate-180" />
+                      </span>
+                    </div>
+                  </AccordionTrigger>
+
+                  {/* Content com fade+slide */}
+                  <AccordionContent className="text-muted-foreground pb-5 leading-relaxed">
+                    <motion.div
+                      initial={{ opacity: 0, y: -6 }}
+                      whileInView={{ opacity: 1, y: 0 }}
+                      viewport={{ once: true, amount: 0.8 }}
+                      transition={{ duration: 0.28 }}
+                      className="px-2 sm:px-2"
+                    >
+                      {faq.answer}
+                    </motion.div>
+                  </AccordionContent>
+                </AccordionItem>
+              </motion.div>
             ))}
           </Accordion>
-        </div>
+        </motion.div>
       </div>
     </section>
   );
