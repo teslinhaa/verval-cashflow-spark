@@ -15,6 +15,7 @@ import { useTranslation } from "react-i18next";
 import { MessageCircle, Globe } from "lucide-react";
 
 const queryClient = new QueryClient();
+const BASENAME = (import.meta.env.BASE_URL || "/grana/mk").replace(/\/$/, "");
 
 function FloatingActions() {
   const { i18n } = useTranslation();
@@ -77,18 +78,16 @@ const App = () => (
     <TooltipProvider>
       <Toaster />
       <Sonner />
-      <BrowserRouter>
-        {/* Ações flutuantes globais */}
+      {/* Use o base do Vite como basename do router */}
+      <BrowserRouter basename={BASENAME}>
         <FloatingActions />
 
         <Routes>
           <Route path="/" element={<Index />} />
-          {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
     </TooltipProvider>
   </QueryClientProvider>
 );
-
 export default App;
