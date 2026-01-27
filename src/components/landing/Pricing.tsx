@@ -236,7 +236,7 @@ export const Pricing = () => {
       period: t("pricing.planPaidPeriod"),
       features,
       cta: t("pricing.ctaWhats"),
-      ctaHref: "https://wa.me/5511910246542",
+      ctaHref: "https://buy.stripe.com/aFa8wOgscahV68Aa2F8Vi00",
       variant: "hero",
       popular: true,
       badge: t("pricing.badgeMostPopular"),

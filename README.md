@@ -64,6 +64,24 @@ This project is built with:
 
 Simply open [Lovable](https://lovable.dev/projects/9a0b8901-3ee6-4d5c-9a9b-ab86c78c3d4f) and click on Share -> Publish.
 
+## SEO (Google e redes sociais)
+
+O projeto já vem com melhorias de SEO para facilitar a indexação e o compartilhamento:
+
+- **Meta tags**: título, descrição, palavras-chave, robots e theme-color
+- **Canonical e Open Graph**: para evitar conteúdo duplicado e melhorar o preview em redes sociais
+- **Twitter Cards**: preview em tweets
+- **JSON-LD**: Organization, WebApplication e FAQPage para rich results no Google
+- **Sitemap** (`public/sitemap.xml`) e **robots.txt** apontando para o sitemap
+
+### Configuração em produção
+
+O projeto está configurado para o domínio **https://chatfinanceiro.com/grana/mk/**.
+
+1. **Imagem para redes sociais**: coloque em `public/og-image.png` uma imagem **1200×630 px** (ex.: screenshot do dashboard ou logo+frase). A URL usada é `https://chatfinanceiro.com/grana/mk/og-image.png`.
+
+2. **Google Search Console**: após o deploy, [envie o sitemap](https://search.google.com/search-console): `https://chatfinanceiro.com/grana/mk/sitemap.xml`.
+
 ## Can I connect a custom domain to my Lovable project?
 
 Yes, you can!

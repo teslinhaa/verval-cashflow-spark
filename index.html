@@ -1,20 +1,106 @@
 <!doctype html>
-<html lang="en">
+<html lang="pt-BR">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Verval — Controle financeiro para pequenos negócios</title>
-    <meta name="description" content="Domine o caixa em minutos sem planilhas. Registre entradas e saídas, calcule lucro automaticamente e enxergue o que faz seu negócio crescer." />
+
+    <!-- Primary meta -->
+    <title>Verval — Controle financeiro para pequenos negócios e assistência técnica</title>
+    <meta name="description" content="Domine o caixa em minutos sem planilhas. Registre entradas e saídas, calcule lucro automaticamente e enxergue o que faz seu negócio crescer. Teste grátis 30 dias." />
     <meta name="author" content="Verval" />
-    <meta name="keywords" content="controle financeiro, gestão de caixa, pequenos negócios, assistência técnica, entradas e saídas, lucro" />
+    <meta name="keywords" content="controle financeiro, gestão de caixa, fluxo de caixa, pequenos negócios, assistência técnica, entradas e saídas, lucro, planilha financeira, software financeiro, R$ 30 mês" />
+    <meta name="robots" content="index, follow" />
+    <meta name="theme-color" content="#0f172a" />
 
-    <meta property="og:title" content="Verval — Controle financeiro para pequenos negócios" />
-    <meta property="og:description" content="Registre entradas e saídas, calcule lucro automaticamente e enxergue o que faz seu negócio crescer." />
+    <!-- Canonical: https://chatfinanceiro.com/grana/mk/ -->
+    <link rel="canonical" href="https://chatfinanceiro.com/grana/mk/" />
+
+    <!-- Open Graph -->
     <meta property="og:type" content="website" />
+    <meta property="og:title" content="Verval — Controle financeiro para pequenos negócios" />
+    <meta property="og:description" content="Registre entradas e saídas, calcule lucro automaticamente e enxergue o que faz seu negócio crescer. Teste grátis 30 dias, sem cartão." />
+    <meta property="og:url" content="https://chatfinanceiro.com/grana/mk/" />
+    <meta property="og:site_name" content="Verval" />
+    <meta property="og:locale" content="pt_BR" />
+    <meta property="og:image" content="https://chatfinanceiro.com/grana/mk/og-image.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Dashboard do Verval: controle de entradas, saídas e margem de lucro" />
 
+    <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Verval — Controle financeiro simples" />
-    <meta name="twitter:description" content="Domine o caixa em minutos sem planilhas" />
+    <meta name="twitter:title" content="Verval — Controle financeiro para pequenos negócios" />
+    <meta name="twitter:description" content="Domine o caixa em minutos sem planilhas. Teste grátis 30 dias." />
+    <meta name="twitter:image" content="https://chatfinanceiro.com/grana/mk/og-image.png" />
+    <meta name="twitter:image:alt" content="Dashboard do Verval: controle de entradas, saídas e margem de lucro" />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="/grana/mk/favicon.ico" />
+
+    <!-- Structured data (JSON-LD) para Google -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Organization",
+          "name": "Verval",
+          "url": "https://chatfinanceiro.com/grana/mk/",
+          "description": "Controle financeiro simples e eficiente para pequenos negócios e assistências técnicas.",
+          "sameAs": []
+        },
+        {
+          "@type": "WebApplication",
+          "name": "Verval",
+          "description": "Domine o caixa em minutos sem planilhas. Registre entradas e saídas, calcule lucro automaticamente.",
+          "url": "https://chatfinanceiro.com/grana/mk/",
+          "applicationCategory": "FinanceApplication",
+          "operatingSystem": "Web",
+          "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "BRL",
+            "description": "Teste grátis 30 dias"
+          }
+        },
+        {
+          "@type": "FAQPage",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "Consigo importar do Excel?",
+              "acceptedAnswer": { "@type": "Answer", "text": "Atualmente não oferecemos importação direta de planilhas Excel, mas você pode facilmente cadastrar seus lançamentos manualmente ou em lote. Estamos trabalhando em uma funcionalidade de importação para futuras versões." }
+            },
+            {
+              "@type": "Question",
+              "name": "Como calculam o lucro?",
+              "acceptedAnswer": { "@type": "Answer", "text": "O lucro é calculado automaticamente subtraindo o custo do valor de entrada. Quando o custo é zero ou não informado, o sistema considera o valor total como lucro. Você pode visualizar margens e lucros em tempo real no dashboard." }
+            },
+            {
+              "@type": "Question",
+              "name": "Posso ter vários usuários?",
+              "acceptedAnswer": { "@type": "Answer", "text": "Sim! No plano Pro você pode adicionar usuários ilimitados com diferentes níveis de permissão (admin ou usuário). Cada membro da equipe pode ter sua própria conta com acesso controlado às funcionalidades." }
+            },
+            {
+              "@type": "Question",
+              "name": "Dá para filtrar por período e categoria?",
+              "acceptedAnswer": { "@type": "Answer", "text": "Com certeza! O Verval oferece filtros avançados por período (dia, semana, mês), categoria, responsável e tipo de lançamento. Você pode combinar múltiplos filtros para análises precisas." }
+            },
+            {
+              "@type": "Question",
+              "name": "Tem versão mobile?",
+              "acceptedAnswer": { "@type": "Answer", "text": "O Verval é um Progressive Web App (PWA) totalmente responsivo. Você pode acessá-lo de qualquer dispositivo através do navegador e até adicionar um atalho na tela inicial do seu smartphone para acesso rápido." }
+            },
+            {
+              "@type": "Question",
+              "name": "Como funciona a recorrência?",
+              "acceptedAnswer": { "@type": "Answer", "text": "Ao criar um lançamento, você pode definir se ele é recorrente (mensal) ou indefinido. O sistema registra automaticamente os lançamentos futuros sem precisar cadastrá-los manualmente todos os meses." }
+            }
+          ]
+        }
+      ]
+    }
+    </script>
   </head>
 
   <body>
