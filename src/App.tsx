@@ -50,7 +50,7 @@ function FloatingActions() {
           >
             <MessageCircle className="w-5 h-5" />
             <span className="hidden sm:inline">
-              {isPT ? "Falar no WhatsApp" : "Chat on WhatsApp"}
+              {isPT ? "Cadastro" : "Registration"}
             </span>
           </Button>
         </a>
