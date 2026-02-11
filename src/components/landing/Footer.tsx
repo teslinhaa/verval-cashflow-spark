@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { MessageCircle, User } from "lucide-react";
 import { useTranslation } from "react-i18next";
+import { Link } from "react-router-dom";
 
 const container = {
   hidden: { opacity: 0 },
@@ -85,14 +86,14 @@ export const Footer = () => {
             <h4 className="font-semibold mb-4">{t("footer.sections.legal.title")}</h4>
             <ul className="space-y-2 text-muted-foreground">
               <li>
-                <a href="https://chatfinanceiro.com/grana/termos-de-servico" target="_blank" className="hover:text-primary transition-colors">
+                <Link to="/termos-de-servico" className="hover:text-primary transition-colors">
                   {t("footer.sections.legal.links.terms")}
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="https://chatfinanceiro.com/grana/politica-de-privacidade" target="_blank" className="hover:text-primary transition-colors">
+                <Link to="/politica-de-privacidade" className="hover:text-primary transition-colors">
                   {t("footer.sections.legal.links.privacy")}
-                </a>
+                </Link>
               </li>
             </ul>
           </motion.div>
