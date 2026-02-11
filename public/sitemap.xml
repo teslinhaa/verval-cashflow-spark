@@ -3,8 +3,20 @@
   <!-- Domínio: https://chatfinanceiro.com/grana/mk/ -->
   <url>
     <loc>https://chatfinanceiro.com/grana/mk/</loc>
-    <lastmod>2025-01-27</lastmod>
+    <lastmod>2026-02-11</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://chatfinanceiro.com/grana/mk/politica-de-privacidade/</loc>
+    <lastmod>2026-02-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://chatfinanceiro.com/grana/mk/termos-de-servico/</loc>
+    <lastmod>2026-02-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
   </url>
 </urlset>
