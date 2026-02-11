@@ -50,7 +50,7 @@ function FloatingActions() {
           >
             <MessageCircle className="w-5 h-5" />
             <span className="hidden sm:inline">
-              {isPT ? "Cadastro" : "Registration"}
+              {isPT ? "Tirar dúvidas" : "Get help"}
             </span>
           </Button>
         </a>

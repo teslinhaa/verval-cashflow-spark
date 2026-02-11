@@ -85,18 +85,13 @@ export const Footer = () => {
             <h4 className="font-semibold mb-4">{t("footer.sections.legal.title")}</h4>
             <ul className="space-y-2 text-muted-foreground">
               <li>
-                <a href="#" className="hover:text-primary transition-colors">
+                <a href="https://chatfinanceiro.com/grana/termos-de-servico" target="_blank" className="hover:text-primary transition-colors">
                   {t("footer.sections.legal.links.terms")}
                 </a>
               </li>
               <li>
-                <a href="#" className="hover:text-primary transition-colors">
+                <a href="https://chatfinanceiro.com/grana/politica-de-privacidade" target="_blank" className="hover:text-primary transition-colors">
                   {t("footer.sections.legal.links.privacy")}
-                </a>
-              </li>
-              <li>
-                <a href="#" className="hover:text-primary transition-colors">
-                  {t("footer.sections.legal.links.contact")}
                 </a>
               </li>
             </ul>
