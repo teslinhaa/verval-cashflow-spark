@@ -140,7 +140,7 @@ const resources = {
             title: "Legal",
             links: {
               terms: "Termos de Uso",
-              privacy: "Privacidade",
+              privacy: "Política de Privacidade",
               contact: "Contato"
             }
           }
@@ -310,7 +310,7 @@ const resources = {
             title: "Legal",
             links: {
               terms: "Terms of Use",
-              privacy: "Privacy",
+              privacy: "Privacy Policy",
               contact: "Contact"
             }
           }
