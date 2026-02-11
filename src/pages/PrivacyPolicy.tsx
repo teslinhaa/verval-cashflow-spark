@@ -68,7 +68,7 @@ const PrivacyPolicy = () => {
           <h2 className="text-xl font-semibold">7. Contato</h2>
           <p>
             Para dúvidas sobre esta Política de Privacidade ou solicitações relacionadas a dados pessoais, entre em
-            contato por: <strong>contato@chatfinanceiro.com</strong>.
+            contato por: <strong>pay@chatfinanceiro.com</strong>.
           </p>
         </section>
 
