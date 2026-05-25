@@ -9,9 +9,9 @@ const resources = {
       hero: {
         badge: "Seguro e confiável",
         launches: "{{count}} lançamentos este mês",
-        title: "Domine o caixa em minutos <0>— sem planilhas</0>",
+        title: "Verval Assist: gestão completa <0>sem planilhas soltas</0>",
         subtitle:
-          "Registre entradas e saídas, calcule lucro automaticamente e enxergue o que faz seu negócio crescer.",
+          "Centralize caixa, clientes, produtos, equipe, recorrências, cobranças, comprovantes e apoio tributário MEI em um único painel.",
         ctaPrimary: "Começar grátis",
         hint: "Role para ver como funciona",
         badgeRealtime: "Tempo real",
@@ -20,7 +20,7 @@ const resources = {
       },
       pricing: {
         title: "Planos simples, <0>sem surpresas</0>",
-        subtitle: "Teste grátis por 30 dias. Depois, apenas R$ 30/mês.",
+        subtitle: "Teste grátis por 30 dias. Depois, apenas R$ 70/mês.",
         footer: "Sem fidelidade. Cancele quando quiser.",
         badgeMostPopular: "Mais Popular",
         badgeNoCard: "Sem cartão",
@@ -49,6 +49,9 @@ const resources = {
           tenSeconds: "Registro de transações em 10 segundos",
           autoProfitZeroCost: "Cálculo automático de lucro quando custo = 0",
           recurrence: "Recorrência mensal/indefinida para assinaturas",
+          billingReceipts: "Cobranças, pagamentos e comprovantes vinculados aos lançamentos",
+          meiSupport: "Apoio MEI com limite anual, DAS, DASN-SIMEI, CNAE e retiradas",
+          teamClock: "Equipe, permissões e controle de ponto com correções",
           smartFilters: "Filtros inteligentes por período, categoria e responsável",
           multiuser: "Gestão multiusuário com controle de permissões",
           securityAuth: "Segurança com autenticação e controle de acesso",
@@ -94,12 +97,24 @@ const resources = {
           recurrence: {
             q: "Como funciona a recorrência?",
             a: "Ao criar um lançamento, você pode definir se ele é recorrente (mensal) ou indefinido. O sistema registra automaticamente os lançamentos futuros sem precisar cadastrá-los manualmente todos os meses."
+          },
+          paymentsReceipts: {
+            q: "Consigo cobrar clientes e emitir comprovantes?",
+            a: "Sim. O Verval permite registrar pagamentos manuais, acompanhar valores pagos e pendentes, gerar links de cobrança pela InfinitePay e criar comprovantes em PDF para compartilhar com o cliente."
+          },
+          meiTax: {
+            q: "O módulo MEI substitui um contador?",
+            a: "Não. O módulo MEI oferece estimativas e apoio operacional para limite anual, DAS, DASN-SIMEI, CNAE e retiradas para pessoa física, mas não substitui a validação de um contador."
+          },
+          timeClock: {
+            q: "Dá para controlar ponto da equipe?",
+            a: "Sim. Você pode configurar jornadas por funcionário, registrar início, pausa, retomada e encerramento, além de gerenciar correções de ponto com aprovação e histórico."
           }
         }
       },
       features: {
         title: "Controle financeiro <0>que funciona</0>",
-        subtitle: "Tudo o que você precisa para gerenciar seu caixa com clareza e confiança",
+        subtitle: "Do caixa à operação: tudo o que você precisa para gerenciar o negócio com clareza e confiança",
         hoverHint: "Dica: passe o mouse sobre os cards para ver o efeito de profundidade.",
         items: {
           realtime: {
@@ -116,7 +131,61 @@ const resources = {
           },
           frictionless: {
             title: "Sem atrito",
-            desc: "Registre lançamentos em 10 segundos com custo opcional, recorrência e responsável definidos."
+            desc: "Registre lançamentos em 10 segundos com cliente, produto, custo, recorrência e responsável definidos."
+          }
+        }
+      },
+      modules: {
+        title: "Módulos para operar <0>o negócio inteiro</0>",
+        subtitle: "O Verval Assist reúne a rotina financeira, comercial, operacional e tributária em fluxos conectados.",
+        items: {
+          dashboard: {
+            title: "Dashboard financeiro",
+            desc: "Entradas, saídas, lucro, margem, saldo, evolução mensal, top categorias e atalhos para agir rápido."
+          },
+          entries: {
+            title: "Lançamentos completos",
+            desc: "Entradas e saídas com status aberto, parcial ou finalizado, cliente, produto, custo, lucro e funcionário."
+          },
+          payments: {
+            title: "Pagamentos e cobranças",
+            desc: "Pagamentos parciais ou totais, pendências, links InfinitePay e envio pronto pelo WhatsApp."
+          },
+          receipts: {
+            title: "Comprovantes",
+            desc: "PDF A4 ou cupom com dados do emitente, cliente, serviço, produto, valor, logo e link público."
+          },
+          customersProducts: {
+            title: "Clientes, produtos e estoque",
+            desc: "Histórico comercial, produtos com preço, margem, lucro, código de barras e alerta de baixo estoque."
+          },
+          recurrence: {
+            title: "Recorrências e mensalidades",
+            desc: "MRR, ARR, inadimplência, pagamentos por ano, marcação em massa e lançamentos automáticos."
+          },
+          projection: {
+            title: "Projeção financeira",
+            desc: "Previsão de caixa, runway, cenários conservador e otimista, ponto de equilíbrio e exportação CSV."
+          },
+          margin: {
+            title: "Calculadora de margem",
+            desc: "Some custos, defina a margem desejada e saiba quanto cobrar por produtos, serviços e orçamentos."
+          },
+          mei: {
+            title: "MEI Tributário",
+            desc: "Limite anual, DAS estimado, DASN-SIMEI, CNAE, CCMEI, retiradas e apoio para IRPF."
+          },
+          timeTeam: {
+            title: "Ponto e equipe",
+            desc: "Jornada, pausas, correções, aprovações, regras de pagamento e funcionários vinculados à operação."
+          },
+          accessBilling: {
+            title: "Acesso e assinatura",
+            desc: "Login tradicional ou Google, perfis admin/equipe, trial, Stripe, avisos e bloqueio por vencimento."
+          },
+          integrations: {
+            title: "Integrações e logs",
+            desc: "Stripe, InfinitePay, WhatsApp, webhooks, auditoria de pagamentos e conciliação automática."
           }
         }
       },
@@ -149,7 +218,7 @@ const resources = {
       },
       navbar: {
         brand: "Ir para a página inicial",
-        links: { how: "Como funciona", features: "Recursos", pricing: "Preços" },
+        links: { how: "Como funciona", features: "Recursos", modules: "Módulos", pricing: "Preços" },
         actions: { signIn: "Entrar", startFree: "Começar grátis" },
         aria: { openMenu: "Abrir menu", closeMenu: "Fechar menu" }
       },
@@ -179,9 +248,9 @@ const resources = {
       hero: {
         badge: "Safe and reliable",
         launches: "{{count}} launches this month",
-        title: "Master your cash flow in minutes <0>— no spreadsheets</0>",
+        title: "Verval Assist: complete business management <0>without scattered spreadsheets</0>",
         subtitle:
-          "Record income and expenses, calculate profit automatically, and see what makes your business grow.",
+          "Centralize cash flow, customers, products, team, recurrence, payments, receipts and MEI tax support in one panel.",
         ctaPrimary: "Start free",
         hint: "Scroll to see how it works",
         badgeRealtime: "Real-time",
@@ -190,7 +259,7 @@ const resources = {
       },
       pricing: {
         title: "Simple plans, <0>no surprises</0>",
-        subtitle: "Free for 30 days. After that, just R$ 30/month.",
+        subtitle: "Free for 30 days. After that, just R$ 70/month.",
         footer: "No commitment. Cancel anytime.",
         badgeMostPopular: "Most Popular",
         badgeNoCard: "No card required",
@@ -219,6 +288,9 @@ const resources = {
           tenSeconds: "Record transactions in 10 seconds",
           autoProfitZeroCost: "Automatic profit when cost = 0",
           recurrence: "Monthly/indefinite recurrence for subscriptions",
+          billingReceipts: "Billing, payments and receipts linked to entries",
+          meiSupport: "MEI support with annual limit, DAS, DASN-SIMEI, CNAE and withdrawals",
+          teamClock: "Team, permissions and time clock with corrections",
           smartFilters: "Smart filters by period, category, and owner",
           multiuser: "Multi-user management with permission control",
           securityAuth: "Security with authentication and access control",
@@ -264,12 +336,24 @@ const resources = {
           recurrence: {
             q: "How does recurrence work?",
             a: "When creating an entry, you can set it as recurrent (monthly) or indefinite. The system automatically schedules future entries without manual creation every month."
+          },
+          paymentsReceipts: {
+            q: "Can I charge customers and issue receipts?",
+            a: "Yes. Verval lets you record manual payments, track paid and pending amounts, generate InfinitePay payment links and create PDF receipts to share with customers."
+          },
+          meiTax: {
+            q: "Does the MEI module replace an accountant?",
+            a: "No. The MEI module provides estimates and operational support for annual limits, DAS, DASN-SIMEI, CNAE and owner withdrawals, but it does not replace accountant validation."
+          },
+          timeClock: {
+            q: "Can I track my team's working hours?",
+            a: "Yes. You can configure schedules per employee, record start, break, resume and end times, and manage time correction requests with approval and history."
           }
         }
       },
       features: {
         title: "Financial control <0>that works</0>",
-        subtitle: "Everything you need to manage your cash with clarity and confidence",
+        subtitle: "From cash flow to operations: everything you need to manage the business with clarity and confidence",
         hoverHint: "Tip: hover the cards to see the depth effect.",
         items: {
           realtime: {
@@ -286,7 +370,61 @@ const resources = {
           },
           frictionless: {
             title: "Frictionless",
-            desc: "Record entries in 10 seconds with optional cost, recurrence, and assignee."
+            desc: "Record entries in 10 seconds with customer, product, cost, recurrence, and assignee."
+          }
+        }
+      },
+      modules: {
+        title: "Modules to run <0>the whole business</0>",
+        subtitle: "Verval Assist connects financial, commercial, operational and MEI tax routines in one workflow.",
+        items: {
+          dashboard: {
+            title: "Financial dashboard",
+            desc: "Income, expenses, profit, margin, balance, monthly trends, top categories and shortcuts to act fast."
+          },
+          entries: {
+            title: "Complete entries",
+            desc: "Income and expenses with open, partial or finished status, customer, product, cost, profit and employee."
+          },
+          payments: {
+            title: "Payments and billing",
+            desc: "Partial or full payments, pending balances, InfinitePay links and WhatsApp-ready collection messages."
+          },
+          receipts: {
+            title: "Receipts",
+            desc: "A4 or ticket-style PDF with issuer, customer, service, product, amount, logo and public link."
+          },
+          customersProducts: {
+            title: "Customers, products and stock",
+            desc: "Commercial history, products with price, margin, profit, barcode and low-stock alerts."
+          },
+          recurrence: {
+            title: "Recurrence and subscriptions",
+            desc: "MRR, ARR, delinquency, yearly payment manager, bulk marking and automatic paid entries."
+          },
+          projection: {
+            title: "Financial projection",
+            desc: "Cash forecast, runway, conservative and optimistic scenarios, breakeven point and CSV export."
+          },
+          margin: {
+            title: "Margin calculator",
+            desc: "Add costs, set the desired margin and know what to charge for products, services and quotes."
+          },
+          mei: {
+            title: "MEI tax support",
+            desc: "Annual limit, DAS estimate, DASN-SIMEI, CNAE, CCMEI, owner withdrawals and IRPF support."
+          },
+          timeTeam: {
+            title: "Time clock and team",
+            desc: "Work schedules, breaks, corrections, approvals, payment rules and employees tied to operations."
+          },
+          accessBilling: {
+            title: "Access and subscription",
+            desc: "Email or Google login, admin/team profiles, trial, Stripe, expiration notices and overdue blocking."
+          },
+          integrations: {
+            title: "Integrations and logs",
+            desc: "Stripe, InfinitePay, WhatsApp, webhooks, payment audit logs and automatic reconciliation."
           }
         }
       },
@@ -319,7 +457,7 @@ const resources = {
       },
       navbar: {
         brand: "Go to homepage",
-        links: { how: "How it works", features: "Features", pricing: "Pricing" },
+        links: { how: "How it works", features: "Features", modules: "Modules", pricing: "Pricing" },
         actions: { signIn: "Sign in", startFree: "Start free" },
         aria: { openMenu: "Open menu", closeMenu: "Close menu" }
       },

@@ -24,7 +24,17 @@ export const FAQ = () => {
   const { t } = useTranslation();
 
   // chaves dos itens para mapear perguntas/respostas
-  const faqKeys = ["importExcel", "profitCalc", "multiuser", "filters", "mobile", "recurrence"] as const;
+  const faqKeys = [
+    "importExcel",
+    "profitCalc",
+    "multiuser",
+    "filters",
+    "mobile",
+    "recurrence",
+    "paymentsReceipts",
+    "meiTax",
+    "timeClock",
+  ] as const;
   const faqs = faqKeys.map((k) => ({
     key: k,
     question: t(`faq.items.${k}.q`),

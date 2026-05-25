@@ -73,6 +73,7 @@ export const Navbar = () => {
             <div className="hidden md:flex items-center gap-8">
               <NavBtn onClick={() => scrollToSection("como-funciona")}>{t("navbar.links.how")}</NavBtn>
               <NavBtn onClick={() => scrollToSection("recursos")}>{t("navbar.links.features")}</NavBtn>
+              <NavBtn onClick={() => scrollToSection("modulos")}>{t("navbar.links.modules")}</NavBtn>
               <NavBtn onClick={() => scrollToSection("precos")}>{t("navbar.links.pricing")}</NavBtn>
 
               <a href="https://chatfinanceiro.com/grana" target="_blank" rel="noopener noreferrer">
@@ -125,6 +126,7 @@ export const Navbar = () => {
                 <div className="py-4 space-y-3">
                   <MobileItem onClick={() => scrollToSection("como-funciona")}>{t("navbar.links.how")}</MobileItem>
                   <MobileItem onClick={() => scrollToSection("recursos")}>{t("navbar.links.features")}</MobileItem>
+                  <MobileItem onClick={() => scrollToSection("modulos")}>{t("navbar.links.modules")}</MobileItem>
                   <MobileItem onClick={() => scrollToSection("precos")}>{t("navbar.links.pricing")}</MobileItem>
                   <div className="px-1 space-y-2">
                     <Button asChild variant="outline" size="sm" className="w-full" aria-label={t("navbar.actions.signIn")}>

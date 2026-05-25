@@ -109,8 +109,6 @@ function FeatureCard({ feature, index }: { feature: I18nFeature; index: number }
           initial={{ opacity: 0 }}
           whileHover={{ opacity: 1 }}
         >
-          {/* traduzido */}
-          {/* eslint-disable-next-line jsx-a11y/aria-role */}
           <span>{/* t no pai não está aqui, então passo como prop */}</span>
         </motion.div>
       </motion.div>

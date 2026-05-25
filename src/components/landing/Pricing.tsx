@@ -81,7 +81,7 @@ function PricingCard({ plan, index }: { plan: Plan; index: number }) {
 
   // Extrai número da string plan.price (agora só números, mas mantém robusto)
   const priceNumber = useMemo(() => {
-    const match = plan.price.match(/(\d+[\.,]?\d*)/);
+    const match = plan.price.match(/(\d+[.,]?\d*)/);
     return match ? Number(match[1].replace(",", ".")) : null;
   }, [plan.price]);
 
@@ -232,7 +232,7 @@ export const Pricing = () => {
     {
       name: t("pricing.planPaidName"),
       description: t("pricing.planPaidDesc"),
-      price: "30",
+      price: "70",
       period: t("pricing.planPaidPeriod"),
       features,
       cta: t("pricing.ctaWhats"),
